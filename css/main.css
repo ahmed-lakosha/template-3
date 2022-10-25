@@ -69,15 +69,15 @@ header .container .location a {
   }
 }
 
-header .container ul.icons {
+header .container ul.icon {
   display: flex;
 }
 
-header .container ul.icons li {
+header .container ul.icon li {
   margin-left: 10px;
 }
 
-header .container ul.icons li i {
+header .container ul.icon li i {
   color: white;
 }
 
