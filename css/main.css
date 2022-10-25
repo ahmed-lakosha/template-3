@@ -240,7 +240,7 @@ nav ul.links li ul.news li:not(:last-child) {
 }
 
 /* icons */
-.icons {
+section.icons {
   padding: 100px 0px;
 }
 
