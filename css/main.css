@@ -1,0 +1,364 @@
+:root {
+  --main-color: #5abfab;
+  --main2-color: #5a6f80;
+  --main3-color: #eff8ff;
+  --main-lineheight: 1.7;
+  --main-transition: .3s;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  text-transform: capitalize;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+/* header */
+header {
+  background-color: var(--main-color);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  font-size: 14px;
+
+}
+
+header .container .location {
+  color: white;
+}
+
+
+header .container .location i {
+  margin-left: 10px;
+}
+
+header .container .location a {
+  color: inherit;
+}
+
+@media (max-width:768px) {
+
+  header .container .location a {
+    display: none;
+  }
+}
+
+header .container ul.icons {
+  display: flex;
+}
+
+header .container ul.icons li {
+  margin-left: 10px;
+}
+
+header .container ul.icons li i {
+  color: white;
+}
+
+/* nav */
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--main2-color);
+}
+
+@media (max-width:991px) {
+
+  nav .container {
+    flex-direction: column;
+  }
+}
+
+nav .logo {
+  display: flex;
+}
+
+nav .logo img {
+  width: 100px;
+}
+
+nav .logo .text {
+  margin: 20px;
+}
+
+nav .logo .text h2 {
+  margin-bottom: 5px;
+  color: var(--main-color);
+}
+
+nav .logo .text p {
+  font-size: 14px;
+}
+
+nav ul.links {
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media (max-width:767px) {
+
+  nav ul.links {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+  }
+
+  nav ul.links>li:nth-child(4) {
+    grid-area: 1 / 4 / 3 / 5;
+    align-self: center;
+  }
+}
+
+nav ul.links>li {
+  font-size: 17px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 50px;
+  transition: var(--main-transition);
+  border: 2px white solid;
+}
+
+nav ul.links>li:hover {
+  border-color: var(--main2-color);
+}
+
+nav ul.links li a {
+  color: var(--main2-color);
+}
+
+nav ul.links li.news {
+  position: relative;
+}
+
+nav ul.links li.news ul.news {
+  display: none;
+}
+
+nav ul.links li.news:hover ul.news {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  padding: 5px;
+  border-radius: 15px;
+  border: 2px var(--main2-color) solid;
+  top: 50px;
+  right: 0px;
+  transition: var(--main-transition);
+  z-index: 2;
+}
+
+nav ul.links li ul.news li {
+  padding: 6px 2px;
+}
+
+nav ul.links li ul.news li:not(:last-child) {
+  border-bottom: 1px solid;
+}
+
+/* landing */
+.landing {
+  background-image: url(../img/slide/volunteer-helping-with-donation-box.jpg);
+  background-size: cover;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+}
+
+.landing .header-text {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  padding: 65px 75px;
+  color: var(--main2-color);
+  text-align: right;
+}
+
+.landing .container:before {
+  content: "";
+  background-color: white;
+  width: 773px;
+  height: 407px;
+  position: absolute;
+  right: -220px;
+  bottom: -114px;
+  transform: rotate(320deg);
+}
+
+.landing .header-text h1 {
+  font-size: 40px;
+}
+
+.landing .header-text p {
+  font-size: 14px;
+}
+
+@media (max-width:767px) {
+
+  .landing .header-text {
+    padding: 25px;
+  }
+
+  .landing .container:before {
+    bottom: -290px;
+  }
+
+  .landing .header-text h1 {
+    font-size: 30px;
+  }
+
+  .landing .header-text p {
+    font-size: 12px;
+  }
+}
+
+/* icons */
+.icons {
+  padding: 100px 0px;
+}
+
+.icons h2 {
+  text-align: center;
+  color: var(--main2-color);
+  margin-bottom: 30px;
+}
+
+.icons .icon-box {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.icons .icon-box img {
+  display: block;
+}
+
+.icons .icon-box .box {
+  padding: 25px 40px;
+  border-radius: 10px;
+  text-align: center;
+  color: var(--main-color);
+}
+
+.icons .icon-box .box span {
+  font-weight: bold;
+}
+
+.icons .icon-box .box:first-child span,
+.icons .icon-box .box:last-child span {
+  display: block;
+}
+
+.icons .icon-box .box:hover {
+  box-shadow: 0 10px 50px -5px var(--main2-color);
+}
+
+/* storu */
+.story {
+  background-color: var(--main3-color);
+}
+
+.story .container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  gap: 15px 15px;
+  padding: 30px;
+}
+
+.story .container div {
+  background-color: white;
+  border-radius: 10px;
+  color: var(--main2-color);
+}
+
+.story .img {
+  grid-area: 1/1/3/3;
+  overflow: hidden;
+}
+
+.story .img img {
+  height: 100%;
+  width: 100%;
+
+}
+
+.story .our-story {
+  grid-area: 1/3/1/5;
+  padding: 30px;
+}
+
+.story .our-story h2 {
+  font-size: 30px;
+}
+
+.story .our-story h4 {
+  color: var(--main-color);
+  margin: 15px 0;
+}
+
+.story p {
+  font-size: 14px;
+  line-height: var(--main-lineheight);
+}
+
+
+.story .our-mission {
+  padding: 30px;
+}
+
+.story .our-mission h4 {
+  color: var(--main-color);
+  margin-bottom: 15px;
+}
+
+.story .our-mission p {
+  margin-bottom: 10px;
+}
+
+
+.story .our-mission form .chick {
+  font-size: 12px;
+}
+
+.story .our-mission form .chick input,
+.story .our-mission form .chick label {
+  margin: 5px;
+}
+
+
+.story .num {
+  padding: 30px;
+}
+
+.story .num span {
+  color: var(--main-color);
+  font-size: 70px;
+  font-weight: bold;
+}
