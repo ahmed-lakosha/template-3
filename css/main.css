@@ -2,7 +2,7 @@
   --main-color: #5abfab;
   --main2-color: #5a6f80;
   --main3-color: #eff8ff;
-  --main-lineheight: 1.7;
+  --main-lineheight: 1.5;
   --main-transition: .3s;
 }
 
@@ -287,7 +287,7 @@ section.icons {
 
 .story .container {
   display: grid;
-  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
   gap: 15px 15px;
   padding: 30px;
 }
@@ -312,6 +312,32 @@ section.icons {
 .story .our-story {
   grid-area: 1/3/1/5;
   padding: 30px;
+}
+
+@media (max-width:991px) {
+
+  .story .container {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+
+
+  .story .our-story {
+    grid-area: 3/1/3/3;
+  }
+}
+
+@media (max-width:767px) {
+
+  .story .container {
+    grid-template-columns: repeat(2, minmax(135px, 1fr));
+  }
+
+
+
+  .story .num span {
+    font-size: 45px !important;
+    margin-top: 45px;
+  }
 }
 
 .story .our-story h2 {
@@ -361,4 +387,353 @@ section.icons {
   color: var(--main-color);
   font-size: 70px;
   font-weight: bold;
+  display: block;
+}
+
+/* snady */
+.sandy .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.sandy .container>div {
+  max-width: 400px;
+  max-height: 500px;
+  margin: 40px;
+}
+
+
+.sandy .img {
+  overflow: hidden;
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0px 6px 20px 1px #5a6f808f;
+}
+
+.sandy .img img {
+  max-width: 100%;
+}
+
+.sandy .text {
+  color: var(--main2-color);
+}
+
+.sandy .text h2 {
+  margin: 5px 0;
+  font-size: 40px;
+}
+
+.sandy .text span {
+  font-size: 12px;
+  display: block;
+  margin-bottom: 40px;
+}
+
+.sandy .text p {
+  margin-bottom: 20px;
+  line-height: var(--main-lineheight);
+}
+
+.sandy .text ul.icon {
+  display: flex;
+  justify-content: center;
+}
+
+.sandy .text ul.icon li {
+  margin: 20px;
+  position: relative;
+}
+
+.sandy .text ul.icon li i {
+  color: white;
+  font-size: 20px;
+  position: relative;
+}
+
+.sandy .text ul.icon li::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  top: -10px;
+  left: -11px;
+  background-color: var(--main2-color);
+  position: absolute;
+}
+
+/* save lives */
+.save-lives {
+  background-color: var(--main3-color);
+  padding: 100px 0;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  overflow: hidden;
+  flex-wrap: wrap;
+  color: var(--main2-color);
+}
+
+.save-lives::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  left: -25px;
+  top: -90px;
+}
+
+.save-lives::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 15px solid var(--main2-color);
+  bottom: -90px;
+}
+
+.save-lives h2 {
+  margin: 15px 10px;
+  font-size: 35px;
+}
+
+.save-lives .buttons {
+
+  margin: 45px 20px;
+}
+
+.save-lives .buttons span {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: var(--main-transition);
+}
+
+.save-lives .buttons span:hover {
+  background: var(--main2-color);
+  color: white;
+
+}
+
+/* causes */
+.causes .container {
+  padding: 100px 0;
+}
+
+.causes .container h2 {
+  text-align: center;
+  color: var(--main2-color);
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+.causes .boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.causes .boxes .box {
+  width: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 30px;
+}
+
+.causes .boxes .box:hover {
+  box-shadow: 0px -3px 10px 6px #c2c2c2b5;
+}
+
+.causes .boxes .box img {
+  width: 100%;
+}
+
+.causes .boxes .box p.button {
+  text-align: center;
+  background-color: var(--main2-color);
+  color: white;
+  padding: 10px;
+}
+
+.causes .boxes .box .text {
+  padding: 15px;
+}
+
+.causes .boxes .box .text h4 {
+  color: var(--main-color);
+  margin-bottom: 10px;
+
+}
+
+.causes .boxes .box .text p {
+  color: var(--main2-color);
+  line-height: var(--main-lineheight);
+  font-size: 10px;
+}
+
+.causes .boxes .box .text .pris {
+  background-color: #eee;
+  height: 5px;
+  border-radius: 3px;
+  margin: 10px 0;
+}
+
+.causes .boxes .box .text .pris span {
+  background-color: var(--main2-color);
+  height: 5px;
+  border-radius: 3px;
+  display: block;
+}
+
+.causes .boxes .box .text .mon {
+  display: flex;
+  justify-content: space-between;
+}
+
+.causes .boxes .box .text .mon span {
+  font-weight: bold;
+}
+
+/* volunteer */
+.volunteer {
+  padding: 50px 0;
+  position: relative;
+  background-color: var(--main2-color);
+  overflow: hidden;
+}
+
+.volunteer::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  right: -35px;
+  bottom: -35px;
+
+}
+
+.volunteer .container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.volunteer .container>div {
+  flex: 1;
+  margin: 50px 20px;
+}
+
+
+.volunteer .inp h2 {
+  color: white;
+  margin-bottom: 25px;
+  font-size: 35px;
+
+}
+
+.volunteer .inp .inpute {
+  background-color: white;
+  border-radius: 15px;
+  padding: 40px;
+
+}
+
+.volunteer .inp .inpute h3 {
+  margin-bottom: 20px;
+}
+
+.volunteer .inp form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(120px, 1fr));
+  gap: 25px;
+}
+
+.volunteer .inp form textarea,
+.volunteer .inp form label,
+.volunteer .inp form input {
+  height: 32px;
+  background-color: var(--main3-color);
+  border: none;
+  padding: 7px;
+  box-shadow: 0 0 6px 1px #9e9e9e75;
+
+}
+
+.volunteer .inp form label {
+  color: #7d7d7d;
+  white-space: nowrap;
+  overflow: hidden;
+
+}
+
+.volunteer .inp form textarea {
+  height: 100px;
+  grid-column: 1/ 3;
+
+}
+
+.volunteer .inp form input:last-child {
+  background-color: var(--main2-color);
+  width: 100%;
+  padding: 4px;
+  grid-column: 1/ 3;
+  border-radius: 15px;
+  color: white;
+  border: 3px solid var(--main2-color);
+  transition: var(--main-transition);
+}
+
+.volunteer .inp form input:last-child:hover {
+  color: var(--main2-color);
+  background-color: white;
+}
+
+.volunteer .inp form input#cv {
+  display: none;
+}
+
+.volunteer .content {
+  text-align: center;
+}
+
+@media (max-width:767px) {
+
+  .volunteer .content {
+    order: -1;
+  }
+
+}
+
+.volunteer .content .img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.volunteer .content img {
+  height: 200px;
+}
+
+.volunteer .content .text {
+  color: white;
+}
+
+.volunteer .content .text h3 {
+  margin: 30px 0 20px;
+}
+
+.volunteer .content .text p {
+  font-size: 14px;
+  line-height: var(--main-lineheight);
 }
